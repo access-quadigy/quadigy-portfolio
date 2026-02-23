@@ -1,0 +1,16 @@
+
+CREATE TABLE IF NOT EXISTS projects (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  category VARCHAR(100) DEFAULT '',
+  image_url TEXT,
+  client VARCHAR(255) DEFAULT '',
+  services TEXT,
+  url TEXT,
+  description TEXT,
+  skills TEXT,
+  video TEXT,
+  docs TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);

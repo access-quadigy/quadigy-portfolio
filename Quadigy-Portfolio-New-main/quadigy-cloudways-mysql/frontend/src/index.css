@@ -1,0 +1,480 @@
+/* ===== Global fix (prevents overlap) ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+/* Base */
+body {
+  background-color: #fff;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Form controls render as blocks */
+input,
+textarea,
+select,
+button {
+  display: block;
+}
+
+/* Navbar / Grid (your original styles) */
+.navbar {
+  display: flex;
+  padding: 1rem;
+  background: #000;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.portfolio-item img {
+  width: 100%;
+  display: block;
+}
+
+.info {
+  padding: 0.5rem 0;
+}
+
+.category {
+  opacity: 0.6;
+  margin: 0;
+}
+
+.title {
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Minimal shared */
+.input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #f3f3f3;
+  cursor: pointer;
+}
+
+.btn.secondary {
+  background: #eee;
+}
+
+.btn.danger {
+  background: #ffe0e0;
+  border-color: #f5bdbd;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+/* === Admin polish === */
+.admin-wrap {
+  max-width: 1080px;
+  margin: 24px auto;
+  padding: 16px;
+}
+
+.admin-card {
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
+  padding: 18px;
+}
+
+/* two-column form */
+.admin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* label + input wrapper */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.admin-label {
+  display: block;
+  font-weight: 600;
+  margin: 2px 0 6px;
+}
+
+.input,
+.admin-textarea,
+.admin-file,
+.admin-select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d9d9d9;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  background: #fff;
+}
+
+.input:focus,
+.admin-textarea:focus,
+.admin-file:focus,
+.admin-select:focus {
+  border-color: #2684ff;
+  box-shadow: 0 0 0 3px rgba(38, 132, 255, .15);
+}
+
+/* buttons */
+.btn {
+  padding: 10px 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  background: #f6f7f9;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background: #eef1f4;
+}
+
+.btn.primary {
+  background: #2684ff;
+  color: #fff;
+  border-color: #2684ff;
+}
+
+.btn.primary:hover {
+  filter: brightness(.98);
+}
+
+.btn.secondary {
+  background: #f6f7f9;
+}
+
+.btn.danger {
+  background: #ffe9e9;
+  border-color: #ffc9c9;
+  color: #b00020;
+}
+
+/* table */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.table th {
+  font-size: 13px;
+  color: #666;
+}
+
+.table td {
+  font-size: 14px;
+}
+
+.api-banner{
+  width: 100%;
+  max-width: 1180px;
+  margin: 14px auto;
+  padding: 12px 16px;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background: #000;
+  color: #fff;
+}
+
+.api-banner__title{
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.api-banner__msg{
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* ========== Global background fix (removes white area) ========== */
+html, body, #root {
+  height: 100%;
+  background: #0b0b0b;
+}
+
+body {
+  margin: 0;
+  color: #fff;
+}
+
+/* Page wrapper */
+.home-page {
+  background: #0b0b0b;
+  min-height: 100vh;
+}
+
+/* ========== API banner styling (center, black, white text) ========== */
+.api-banner {
+  max-width: 1100px;
+  margin: 18px auto 0;
+  padding: 14px 16px;
+  border-radius: 14px;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.18);
+}
+
+.api-banner--offline {
+  border-color: rgba(255,0,0,.25);
+}
+
+.api-banner--error {
+  border-color: rgba(255,255,255,.18);
+}
+
+/* ========== Hero (same feel like screenshot) ========== */
+.portfolio-hero {
+  position: relative;
+  height: 520px;
+  background: #0b0b0b;
+  overflow: hidden;
+}
+
+/* Optional: put your existing hero background image here */
+.portfolio-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 40%, rgba(255,255,255,.10), transparent 55%),
+              radial-gradient(circle at 70% 60%, rgba(255,180,120,.10), transparent 55%),
+              linear-gradient(to bottom, rgba(0,0,0,.35), rgba(0,0,0,.85));
+  pointer-events: none;
+}
+
+.portfolio-hero__inner {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  padding: 110px 20px 0;
+}
+
+.portfolio-hero__crumb {
+  font-size: 14px;
+  opacity: .85;
+  text-transform: lowercase;
+}
+
+.portfolio-hero__title {
+  margin: 18px 0 0;
+  font-size: 92px;
+  line-height: 1.02;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+/* ========== Section wrapper ========== */
+.portfolio-section {
+  background: #0b0b0b;
+  padding: 34px 0 70px;
+}
+
+.portfolio-section__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Top label + long rule line */
+.portfolio-topline {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0 0 26px;
+}
+
+.portfolio-topline__label {
+  font-size: 14px;
+  text-transform: lowercase;
+  opacity: .85;
+}
+
+.portfolio-topline__rule {
+  height: 1px;
+  flex: 1;
+  background: rgba(255,255,255,.18);
+}
+
+/* Empty state */
+.portfolio-empty {
+  padding: 30px 10px;
+  text-align: center;
+  opacity: .8;
+}
+
+/* ========== GRID (same spacing) ========== */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 36px;
+}
+
+@media (max-width: 1200px) {
+  .portfolio-grid { grid-template-columns: repeat(3, 1fr); }
+  .portfolio-hero__title { font-size: 72px; }
+}
+@media (max-width: 900px) {
+  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-hero { height: 420px; }
+  .portfolio-hero__title { font-size: 56px; }
+}
+@media (max-width: 540px) {
+  .portfolio-grid { grid-template-columns: 1fr; }
+  .portfolio-hero { height: 360px; }
+  .portfolio-hero__title { font-size: 44px; }
+}
+
+/* ========== CARD STYLE + hover fade-up animation ========== */
+.p-card {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+.p-card__media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #111;
+}
+
+.p-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform .6s ease, filter .6s ease;
+}
+
+.p-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.15);
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+
+.p-card__meta {
+  padding-top: 14px;
+}
+
+.p-card__cat {
+  font-size: 14px;
+  opacity: .7;
+  margin-bottom: 6px;
+}
+
+.p-card__titleRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.p-card__title {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.25;
+
+  /* fade-up animation baseline */
+  transform: translateY(10px);
+  opacity: .85;
+  transition: transform .35s ease, opacity .35s ease;
+}
+
+.p-card__arrow {
+  font-size: 20px;
+  opacity: .75;
+
+  transform: translateY(10px);
+  transition: transform .35s ease, opacity .35s ease;
+}
+
+.p-card__underline {
+  height: 1px;
+  margin-top: 12px;
+  background: rgba(255,255,255,.18);
+}
+
+/* Hover effects */
+.p-card:hover .p-card__media img {
+  transform: scale(1.06);
+  filter: brightness(1.05);
+}
+
+.p-card:hover .p-card__overlay {
+  opacity: 1;
+}
+
+.p-card:hover .p-card__title,
+.p-card:hover .p-card__arrow {
+  transform: translateY(0);
+  opacity: 1;
+}

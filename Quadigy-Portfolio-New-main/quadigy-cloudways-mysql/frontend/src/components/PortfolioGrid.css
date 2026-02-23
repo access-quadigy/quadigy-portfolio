@@ -1,0 +1,319 @@
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    background-color: #111;
+}
+
+.portfolio-card {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.portfolio-card .image-container {
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.portfolio-card img {
+    width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.05);
+}
+
+.category {
+    font-size: 14px;
+    color: #aaa;
+    margin: 10px 0 5px 0;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.portfolio-card:hover .title {
+    color: red;
+}
+
+
+.portfolio-card .image-container {
+    overflow: hidden;
+    border-radius: 4px;
+    height: 250px;
+    /* Set height here */
+}
+
+.portfolio-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* This keeps all images uniform */
+    transition: transform 0.5s ease;
+}
+
+/* meta lines for card */
+.meta {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #ddd;
+    line-height: 1.4
+}
+
+.meta-line {
+    margin: 2px 0
+}
+
+.meta-line strong {
+    color: #fff;
+    font-weight: 600
+}
+
+.linkish {
+    cursor: pointer;
+    text-decoration: underline;
+    word-break: break-all
+}
+
+/* Title band */
+.sans-page-title {
+    background: #111;
+    color: #fff;
+    padding: 40px 0;
+}
+
+.sans-page-title h1 {
+    margin: 0;
+    font-size: 38px;
+    line-height: 1.2;
+    text-align: left;
+}
+
+/* Wrapper */
+.wrapper {
+    width: 90%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.sans-content {
+    background: #fff;
+}
+
+/* Feature image */
+.sans-portfolio-feature img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 24px 0 12px;
+}
+
+/* Content + Sidebar layout */
+.sans-articles-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 32px;
+    margin-top: 16px;
+}
+
+@media (max-width: 992px) {
+    .sans-articles-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Article body */
+.sans-case-study .product-desc p {
+    margin: 0 0 16px;
+}
+
+/* Sidebar widgets (dashed boxes like demo) */
+.aside-widgets .aside-widget {
+    border: 2px dashed #ddd;
+    padding: 16px;
+    margin-bottom: 18px;
+    border-radius: 8px;
+    background: white;
+}
+
+.aside-widgets h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    letter-spacing: .02em;
+}
+
+/* Similar Projects */
+.related-cases {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.related-cases li {
+    margin: 0 0 12px;
+}
+
+.related-cases img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+
+.related-title {
+    display: inline-block;
+    margin-top: 6px;
+    text-decoration: none;
+}
+
+/* Buttons (Portfolio / CTA) */
+.sans-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border-radius: 4px;
+    background: #eee;
+    color: #111;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.sans-button.brown-button {
+    background: #6b4a3b;
+    color: #fff;
+}
+
+.sans-button.default-button {
+    background: #e6e6e6;
+}
+
+/* Quick contact section */
+.sans-quick-contact {
+    background: #f3f0ec;
+    padding: 36px 0;
+    margin-top: 24px;
+}
+
+.sans-quick-contact .last-p {
+    margin-top: 12px;
+}
+
+/* Container becomes two columns: left sidebar, right content */
+.sans-articles-container {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    /* left narrow, right wide */
+    gap: 40px;
+    margin-top: 24px;
+}
+
+/* Right column gets a vertical divider like the screenshot */
+.sans-case-study {
+    padding-left: 40px;
+    border-left: 1px solid #dcdcdc;
+    /* the thin grey vertical line */
+    color: #343434;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+/* Sidebar typography + separators */
+.sans-case-aside {
+    font-size: 15px;
+}
+
+.sans-case-aside h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0 0 6px;
+}
+
+.aside-widget {
+    padding: 18px 0;
+    border-bottom: 1px solid #e5e5e5;
+    /* thin horizontal divider between widgets */
+}
+
+.aside-widget.last-widget {
+    border-bottom: none;
+}
+
+/* Similar projects list */
+.related-cases {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.related-cases li {
+    margin-bottom: 16px;
+}
+
+.related-cases img {
+    width: 100%;
+    height: auto;
+    border-radius: 3px;
+    display: block;
+}
+
+.related-title {
+    display: block;
+    margin-top: 6px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #0c4a6e;
+}
+
+/* Back button style */
+.sans-button.default-button {
+    display: inline-block;
+    padding: 8px 14px;
+    background: #0ea5b7;
+    /* teal-ish like the demo */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+/* Feature image stays as you have it */
+.sans-portfolio-feature img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+
+    .sans-portfolio-feature img,
+    .sans-portfolio-feature {
+        max-height: 80vh;
+        /* give some room for mobile UI bars */
+        height: auto;
+    }
+}
+
+
+/* Responsive: stack on small screens */
+@media (max-width: 992px) {
+    .sans-articles-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sans-case-study {
+        border-left: none;
+        padding-left: 0;
+        margin-top: 10px;
+    }
+}
